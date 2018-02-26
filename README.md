@@ -1,5 +1,6 @@
 # This fork contains the RTL fix made in this PR:
 https://github.com/skv-headless/react-native-scrollable-tab-view/pull/788
+
 Remove this fork after it gets merge
 
 ---
