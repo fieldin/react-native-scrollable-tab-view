@@ -7,6 +7,8 @@ const {
   Text,
   View,
   Animated,
+  I18nManager,
+  Platform
 } = ReactNative;
 const Button = require('./Button');
 
@@ -67,17 +69,20 @@ const DefaultTabBar = createReactClass({
       bottom: 0,
     };
 
+    const tabUnderlineOffset = containerWidth / numberOfTabs;
     const translateX = this.props.scrollValue.interpolate({
       inputRange: [0, 1],
-      outputRange: [0,  containerWidth / numberOfTabs],
+      outputRange: [0,  I18nManager.isRTL ? -tabUnderlineOffset : tabUnderlineOffset],
     });
     return (
       <View style={[styles.tabs, {backgroundColor: this.props.backgroundColor, }, this.props.style, ]}>
-        {this.props.tabs.map((name, page) => {
+        {
+          this.props.tabs.map((name, page) => {
           const isTabActive = this.props.activeTab === page;
           const renderTab = this.props.renderTab || this.renderTab;
           return renderTab(name, page, isTabActive, this.props.goToPage);
-        })}
+        })
+        }
         <Animated.View
           style={[
             tabUnderlineStyle,
