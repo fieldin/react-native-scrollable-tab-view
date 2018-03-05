@@ -1,3 +1,14 @@
+# This fork contains the RTL fix made in this PR:
+https://github.com/skv-headless/react-native-scrollable-tab-view/pull/788
+
+Remove this fork after it gets merge
+
+it only takes the changes in:
+`/node_modules/react-native-scrollable-tab-view/DefaultTabBar.js`
+
+And works for both iOS and Android.
+---
+
 
 ## react-native-scrollable-tab-view
 [![npm version](https://badge.fury.io/js/react-native-scrollable-tab-view.svg)](https://badge.fury.io/js/react-native-scrollable-tab-view)
