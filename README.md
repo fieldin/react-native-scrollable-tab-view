@@ -6,8 +6,10 @@ Remove this fork after it gets merge
 Edit: seems like it works only for iOS..
 Use this branch insead: 
 https://github.com/fieldin/react-native-scrollable-tab-view/tree/rtl-fix-0.8.0
+
 it only takes the changes in:
 `/node_modules/react-native-scrollable-tab-view/DefaultTabBar.js`
+
 And works for both iOS and Android.
 ---
 
